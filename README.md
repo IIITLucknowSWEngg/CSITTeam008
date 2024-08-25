@@ -3,7 +3,7 @@ CSITTeam008
 
 TEAM NAME:
 
-TEAM IDEA:
+TEAM IDEA: Spotify Clone
 
 TEAM MEMBERS:
 
