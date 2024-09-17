@@ -59,23 +59,23 @@ Platform managers responsible for content curation, playlist management, and use
 
 ### 4.1 Usability
 
-- *Requirement:* The platform must provide an intuitive and visually appealing interface across web and mobile devices.
-- *Evaluation:* Usability testing and user feedback will validate the platform’s ease of use.
+- **Requirement:** The platform must provide an intuitive and visually appealing interface across web and mobile devices.
+- **Evaluation:** Usability testing and user feedback will validate the platform’s ease of use.
 
 ### 4.2 Performance
 
-- *Requirement:* The platform must handle concurrent streaming sessions and playlist updates efficiently, ensuring minimal latency.
-- *Evaluation:* Performance testing under load conditions will verify scalability and responsiveness.
+- **Requirement:** The platform must handle concurrent streaming sessions and playlist updates efficiently, ensuring minimal latency.
+- **Evaluation:** Performance testing under load conditions will verify scalability and responsiveness.
 
 ### 4.3 Security
 
-- *Requirement:* User data, including listening history and personal information, must be encrypted and protected from unauthorized access.
-- *Evaluation:* Regular security audits and compliance with data protection standards will ensure user data security.
+- **Requirement:** User data, including listening history and personal information, must be encrypted and protected from unauthorized access.
+- **Evaluation:** Regular security audits and compliance with data protection standards will ensure user data security.
 
 ### 4.4 Reliability
 
-- *Requirement:* The platform should be available 99.9% of the time, with robust mechanisms for handling service interruptions and data backup.
-- *Evaluation:* Monitoring tools and failover systems will guarantee service continuity and data integrity.
+- **Requirement:** The platform should be available 99.9% of the time, with robust mechanisms for handling service interruptions and data backup.
+- **Evaluation:** Monitoring tools and failover systems will guarantee service continuity and data integrity.
 
 ## 5. User Interface Requirements
 
@@ -90,9 +90,9 @@ A social feed where users can see updates from friends, discover new music, and 
 
 ## 6. Constraints
 
-- *Licensing:* Ensure compliance with music licensing agreements to stream and distribute copyrighted content.
-- *Platform Compatibility:* Support for multiple platforms including web browsers, iOS, Android, and desktop applications.
-- *Bandwidth Optimization:* Efficient streaming protocols and compression techniques to minimize bandwidth usage during playback.
+- **Licensing:** Ensure compliance with music licensing agreements to stream and distribute copyrighted content.
+- **Platform Compatibility:** Support for multiple platforms including web browsers, iOS, Android, and desktop applications.
+- **Bandwidth Optimization:** Efficient streaming protocols and compression techniques to minimize bandwidth usage during playback.
 
 ---
 
