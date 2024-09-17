@@ -53,3 +53,47 @@ Platform managers responsible for content curation, playlist management, and use
 
 - **Functional Requirement:** The platform should allow users to download songs and playlists for offline listening.
 - **Non-Functional Requirement:** Offline mode should be reliable and ensure that downloaded content remains accessible without frequent re-authentication.
+
+
+## 4. System Requirements
+
+### 4.1 Usability
+
+- *Requirement:* The platform must provide an intuitive and visually appealing interface across web and mobile devices.
+- *Evaluation:* Usability testing and user feedback will validate the platform’s ease of use.
+
+### 4.2 Performance
+
+- *Requirement:* The platform must handle concurrent streaming sessions and playlist updates efficiently, ensuring minimal latency.
+- *Evaluation:* Performance testing under load conditions will verify scalability and responsiveness.
+
+### 4.3 Security
+
+- *Requirement:* User data, including listening history and personal information, must be encrypted and protected from unauthorized access.
+- *Evaluation:* Regular security audits and compliance with data protection standards will ensure user data security.
+
+### 4.4 Reliability
+
+- *Requirement:* The platform should be available 99.9% of the time, with robust mechanisms for handling service interruptions and data backup.
+- *Evaluation:* Monitoring tools and failover systems will guarantee service continuity and data integrity.
+
+## 5. User Interface Requirements
+
+### 5.1 Music Player
+A responsive and intuitive music player interface with playback controls, song information display, and queue management.
+
+### 5.2 Playlist Editor
+An easy-to-use interface for creating, editing, and sharing playlists, with drag-and-drop functionality and collaborative features.
+
+### 5.3 Social Feed
+A social feed where users can see updates from friends, discover new music, and share their activity.
+
+## 6. Constraints
+
+- *Licensing:* Ensure compliance with music licensing agreements to stream and distribute copyrighted content.
+- *Platform Compatibility:* Support for multiple platforms including web browsers, iOS, Android, and desktop applications.
+- *Bandwidth Optimization:* Efficient streaming protocols and compression techniques to minimize bandwidth usage during playback.
+
+---
+
+This adapted URD outlines the essential requirements for developing a Spotify Clone, focusing on delivering a seamless music streaming experience while integrating social and personalized features.
