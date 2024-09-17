@@ -112,7 +112,6 @@ The application will be a web-based and mobile platform providing music and podc
 - **Description**: Admins can manage users, content, and system settings.
 - **Inputs**: Admin credentials, management actions.
 - **Outputs**: System reports, user management tools.
-# Software Requirements Specification (SRS) for "Spotify" Clone
 
 ## 4. Non-Functional Requirements
 
