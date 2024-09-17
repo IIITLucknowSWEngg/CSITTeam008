@@ -1,5 +1,7 @@
 # 🎧 CSITTeam008 - Spotify Clone 🎧
 
+## Team Code Wrappers
+
 Welcome to **CSITTeam008's** project repository for our **Spotify Clone**. This project aims to replicate the core functionalities of Spotify, providing users with the ability to stream music, create playlists, and discover new tracks.
 
 ---
@@ -32,55 +34,6 @@ Our project focuses on developing a feature-rich music streaming platform that o
 
 ---
 
-## 🚀 Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-- **Node.js** and **npm** installed on your machine.
-
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/CSITTeam008/spotify-clone.git
-  ```
-2. **Navigate to the project directory**:
-   ```bash
-   cd spotify-clone
-   ```
-3. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-4. **Run the application**:
-   ```bash
-   npm start
-   ```
-5. **Open your browser** and navigate to `http://localhost:3000`
-
----
-
-## 🛠 Tech Stack
-
-- **Frontend**: React, Redux, HTML5, CSS3, Sass
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: JWT, OAuth2
-- **Cloud Services**: AWS S3, Heroku
-- **Version Control**: Git, GitHub
-
----
-
-## 📚 Documentation
-
-- **[Software Requirements Specification](docs/SRS.md)**
-- **[Stakeholder Analysis](docs/Stakeholders.md)**
-- **[Design Diagrams](docs/Design/README.md)**
-- **[Project Plan](docs/ProjectPlan.md)**
-
----
 
 ## 📞 Contact Us
 
@@ -100,4 +53,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-*Made with ❤️ by CSITTeam008*
+*Made with ❤️ by Code Wrappers*
