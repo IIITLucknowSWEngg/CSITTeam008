@@ -23,7 +23,6 @@ Our project focuses on developing a feature-rich music streaming platform that o
 
 | Name                    | GitHub Username                                              | Email                              | Student ID  |
 |-------------------------|--------------------------------------------------------------|------------------------------------|-------------|
-| **Ajay**                | [Ajayantil7](https://github.com/Ajayantil7)                  | ajayantil2004@gmail.com            | LCS2023025  |
 | **Lakshya Prajapati**   | [lakshya-3804](https://github.com/lakshya-3804)              | lakshyaiffco.prajapati@gmail.com   | LCS2023017  |
 | **Shivam Zhar**         | [Shivam1983](https://github.com/Shivam1983)                  | shivamzhar@gmail.com               | LCS2023024  |
 | **Aryan Kadian**        | [aryankad1an](https://github.com/aryankad1an)                | aryankaddian842@gmail.com          | LCS2023051  |
@@ -31,6 +30,7 @@ Our project focuses on developing a feature-rich music streaming platform that o
 | **Rebant Pratap Singh** | [Rebant10](https://github.com/Rebant10)                      | rebantsingh101204@gmail.com        | LCS2023003  |
 | **Sumit Kumar**         | [Eternalynx04](https://github.com/Eternalynx04)              | sumitkbhandari57@gmail.com         | LCS2023044  |
 | **Maneesh Kumar**       | [mani4002](https://github.com/mani4002)                      | maneeshkumar23032004@gmail.com     | LIT2023051  |
+| **Ajay**                | [Ajayantil7](https://github.com/Ajayantil7)                  | ajayantil2004@gmail.com            | LCS2023025  |
 
 ---
 
