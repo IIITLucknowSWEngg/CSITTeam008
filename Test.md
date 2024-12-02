@@ -238,7 +238,25 @@ Then:
 The subscription should be activated.
 The user should have access to premium features.
 ```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const subscriptionPage = require('../pages/subscriptionPage');
 
+describe('Subscribe to Premium', function() {
+  it('should process the subscription successfully', function() {
+    subscriptionPage.open();
+
+    subscriptionPage.selectPlan('Premium');
+
+    subscriptionPage.enterPaymentDetails('4242 4242 4242 4242', '12/25', '123');
+
+    subscriptionPage.submitSubscription();
+
+    expect(subscriptionPage.getConfirmationMessage()).to.equal('Subscription activated');
+
+    expect(browser.getUrl()).to.include('/premium-features');
+  });
+});
 
 ```
 
