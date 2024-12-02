@@ -1,3 +1,6 @@
+![spotify_detailed_features_flowchart](https://github.com/user-attachments/assets/ca5780dd-a227-47c4-9397-b757334baa62)
+
+
 # Spotify Component Documentation
 
 ## Overview
