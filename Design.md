@@ -563,7 +563,7 @@ rectangle Spotify {
 ```
 ## 6. Interface Design
 
-![interface design](Interface design.png)
+![interface design](./Interface_design.png)
 
 ```plantuml
 @startuml
