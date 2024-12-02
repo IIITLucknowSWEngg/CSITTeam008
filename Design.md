@@ -66,7 +66,7 @@ The Spotify clone will use a distributed, microservices-based architecture with 
 
 ### 4.1 Frontend Architecture
 
-![Spotify Clone Frontend Architecture](frontend_arch_spotify.png)
+![Spotify Clone Frontend Architecture](frontend_arch_spotify.jpg)
 
 ```plantuml
 @startuml
