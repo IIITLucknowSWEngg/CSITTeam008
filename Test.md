@@ -273,3 +273,112 @@ describe('Subscribe to Premium', function() {
 });
 
 This test plan ensures that the Spotify Clone application is thoroughly tested across all critical modules, providing a reliable and user-friendly experience.
+
+Plaintext Code for GitHub:
+
+User Registration Test
+
+const chai = require(‘chai’);
+const expect = chai.expect;
+const registrationPage = require(’../pages/registrationPage’);
+
+describe(‘User Registration’, function() {
+it(‘should register a user successfully’, function() {
+registrationPage.open();
+
+registrationPage.enterDetails('newuser@example.com', 'Password123', 'newuser');
+
+registrationPage.submitRegistration();
+
+expect(registrationPage.getWelcomeMessage()).to.include('Welcome, newuser');
+
+expect(browser.getUrl()).to.include('/welcome');
+
+});
+});
+
+Music Search Test
+
+const chai = require(‘chai’);
+const expect = chai.expect;
+const searchPage = require(’../pages/searchPage’);
+
+describe(‘Music Search’, function() {
+it(‘should display relevant songs for the search query’, function() {
+searchPage.open();
+
+searchPage.enterSearchQuery('Shape of You');
+
+searchPage.submitSearch();
+
+expect(searchPage.getResultsCount()).to.be.greaterThan(0);
+
+expect(searchPage.getResultTitles()).to.include('Shape of You');
+
+});
+});
+
+Play Music Test
+
+const chai = require(‘chai’);
+const expect = chai.expect;
+const playerPage = require(’../pages/playerPage’);
+
+describe(‘Play Music’, function() {
+it(‘should play the selected song’, function() {
+playerPage.open();
+
+playerPage.selectSong('Shape of You');
+
+playerPage.playSong();
+
+expect(playerPage.isSongPlaying()).to.be.true;
+
+expect(playerPage.getCurrentSongTitle()).to.equal('Shape of You');
+
+});
+});
+
+Create Playlist Test
+
+const chai = require(‘chai’);
+const expect = chai.expect;
+const playlistPage = require(’../pages/playlistPage’);
+
+describe(‘Create Playlist’, function() {
+it(‘should create a new playlist successfully’, function() {
+playlistPage.open();
+
+playlistPage.clickCreatePlaylist();
+
+playlistPage.enterPlaylistName('My Favorites');
+
+playlistPage.submitPlaylist();
+
+expect(playlistPage.getPlaylists()).to.include('My Favorites');
+
+});
+});
+
+Subscribe to Premium Test
+
+const chai = require(‘chai’);
+const expect = chai.expect;
+const subscriptionPage = require(’../pages/subscriptionPage’);
+
+describe(‘Subscribe to Premium’, function() {
+it(‘should process the subscription successfully’, function() {
+subscriptionPage.open();
+
+subscriptionPage.selectPlan('Premium');
+
+subscriptionPage.enterPaymentDetails('4242 4242 4242 4242', '12/25', '123');
+
+subscriptionPage.submitSubscription();
+
+expect(subscriptionPage.getConfirmationMessage()).to.equal('Subscription activated');
+
+expect(browser.getUrl()).to.include('/premium-features');
+
+});
+});
