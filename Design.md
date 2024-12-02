@@ -345,6 +345,7 @@ Monitoring --> Logging : Collect Logs
 Monitoring --> Dashboard : Visualize Metrics
 
 @enduml
+```
 # Spotify Clone System Design
 
 ## 4.2.1 Distributed Service Ecosystem
