@@ -43,7 +43,7 @@ This workflow focuses on enhancing playlist organization and tag-based discovera
   - Results are displayed in carousel or list formats for seamless exploration.
 ![Playlist_Tagging_and_Navigation_Overview](https://github.com/user-attachments/assets/f7b5b8f3-eb73-426d-896c-c6afa6405518)
 
-# Application Navigation Overview
+# 4. Application Navigation Overview
 
 This document provides an overview of the application's navigation flow and primary components.
 
