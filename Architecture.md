@@ -43,5 +43,32 @@ This workflow focuses on enhancing playlist organization and tag-based discovera
   - Results are displayed in carousel or list formats for seamless exploration.
 ![Playlist_Tagging_and_Navigation_Overview](https://github.com/user-attachments/assets/f7b5b8f3-eb73-426d-896c-c6afa6405518)
 
+# Application Navigation Overview
+
+This document provides an overview of the application's navigation flow and primary components.
+
+## Components:
+
+1. **Authentication Screens**:
+   - Includes `Login`, `Registration`, and `Password Reset`.
+
+2. **Navigation**:
+   - Features `Top Navigation Bar`, `Mobile Navigation`, and `Sidebar`.
+
+3. **Main Application Screens**:
+   - Access core features: `Home`, `Browse`, `Search`, `Playlists`, and `Podcast`.
+
+4. **User Profile**:
+   - Includes `Listening History`, `Favorite Tracks`, `User Profile`, and `Account Settings`.
+
+5. **Creator Studio**:
+   - Tools for creators like `Music Upload`, `Podcast Upload`, and an `Analytics Dashboard`.
+
+6. **UI Components**:
+   - Features include `Playlist Management`, `Recommended Tracks`, `Like Button`, and `Play Controls`.
+
+![Interface_design](https://github.com/user-attachments/assets/1f1e60ee-28bb-4eee-b216-57f5fa6f0d77)
+
+
 
 
