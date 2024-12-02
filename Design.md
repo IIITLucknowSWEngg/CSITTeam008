@@ -173,6 +173,7 @@ note right of "Frontend Application"
 end note
 }
 @enduml
+```
 ### 4.1.1 Architectural Overview
 - **Modular Component-Based Design**: Utilizing React/Next.js for scalable frontend architecture
 - **Responsive Design**: Adaptive layout for web and mobile platforms
