@@ -642,6 +642,7 @@ note right of "UI Components"
     - Desktop: >1024px
 end note
 @enduml
+```
 
 ## 6.1 API Design
 Below are some of the REST API endpoints for interaction:
