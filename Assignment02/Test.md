@@ -88,176 +88,120 @@
 
 ## 7. Test Cases
 
-### **Feature: User Registration and Login**
+### Features Overview
 
-#### Scenario: User registers with valid details
+---
 
-**Given:**  
-The user is on the registration page.
+#### **User Registration and Login**
 
-**When:**  
-The user enters valid details (email, password, username).
-
+**Scenario:** User registers with valid details  
+**Given:** The user is on the registration page.  
+**When:** The user enters valid details (email, password, username) and submits.  
 **Then:**  
-The user should be successfully registered.  
-The user should be redirected to the welcome page.
+- The user should be successfully registered.  
+- The user should be redirected to the welcome page.  
 
 ```javascript
-const chai = require('chai');
-const expect = chai.expect;
-const registrationPage = require('../pages/registrationPage');
-
-describe('User Registration', function() {
-  it('should register a user successfully', function() {
+describe('User Registration', () => {
+  it('should register a user successfully', () => {
     registrationPage.open();
-
     registrationPage.enterDetails('newuser@example.com', 'Password123', 'newuser');
-
     registrationPage.submitRegistration();
-
     expect(registrationPage.getWelcomeMessage()).to.include('Welcome, newuser');
-
     expect(browser.getUrl()).to.include('/welcome');
   });
 });
 ```
 
-Feature: Search Music
+---
 
-Scenario: User searches for a song by title
+#### **Search Music**
 
-Given:
-The user is logged in and on the homepage.
+**Scenario:** User searches for a song by title  
+**Given:** The user is logged in and on the homepage.  
+**When:** The user enters a song title (e.g., “Shape of You”) in the search bar.  
+**Then:** A list of songs matching the title should appear.  
 
-When:
-The user enters a song title (e.g., “Shape of You”) in the search bar.
-
-Then:
-The user should see a list of songs matching the title.
 ```javascript
-const chai = require('chai');
-const expect = chai.expect;
-const searchPage = require('../pages/searchPage');
-
-describe('Music Search', function() {
-  it('should display relevant songs for the search query', function() {
+describe('Music Search', () => {
+  it('should display relevant songs for the search query', () => {
     searchPage.open();
-
     searchPage.enterSearchQuery('Shape of You');
-
     searchPage.submitSearch();
-
     expect(searchPage.getResultsCount()).to.be.greaterThan(0);
-
     expect(searchPage.getResultTitles()).to.include('Shape of You');
   });
 });
 ```
 
-Feature: Play Music
+---
 
-Scenario: User plays a selected song
+#### **Play Music**
 
-Given:
-The user is logged in and has searched for a song.
-
-When:
-The user selects a song from the search results and clicks play.
-
-Then:
-The song should start playing.
-The playback controls should be visible.
+**Scenario:** User plays a selected song  
+**Given:** The user is logged in and has searched for a song.  
+**When:** The user selects a song from the search results and clicks play.  
+**Then:**  
+- The song should start playing.  
+- Playback controls should be visible.  
 
 ```javascript
-
-const chai = require('chai');
-const expect = chai.expect;
-const playerPage = require('../pages/playerPage');
-
-describe('Play Music', function() {
-  it('should play the selected song', function() {
+describe('Play Music', () => {
+  it('should play the selected song', () => {
     playerPage.open();
-
     playerPage.selectSong('Shape of You');
-
     playerPage.playSong();
-
     expect(playerPage.isSongPlaying()).to.be.true;
-
     expect(playerPage.getCurrentSongTitle()).to.equal('Shape of You');
   });
 });
 ```
 
-Feature: Create Playlist
+---
 
-Scenario: User creates a new playlist
+#### **Create Playlist**
 
-Given:
-The user is logged in and on their library page.
-
-When:
-The user clicks on “Create Playlist” and enters a playlist name.
-
-Then:
-A new playlist should be created.
-The playlist should appear in the user’s library.
+**Scenario:** User creates a new playlist  
+**Given:** The user is logged in and on their library page.  
+**When:** The user clicks “Create Playlist” and enters a name.  
+**Then:**  
+- A new playlist should be created.  
+- The playlist should appear in the user’s library.  
 
 ```javascript
-
-const chai = require('chai');
-const expect = chai.expect;
-const playlistPage = require('../pages/playlistPage');
-
-describe('Create Playlist', function() {
-  it('should create a new playlist successfully', function() {
+describe('Create Playlist', () => {
+  it('should create a new playlist successfully', () => {
     playlistPage.open();
-
     playlistPage.clickCreatePlaylist();
-
     playlistPage.enterPlaylistName('My Favorites');
-
     playlistPage.submitPlaylist();
-
     expect(playlistPage.getPlaylists()).to.include('My Favorites');
   });
 });
 ```
 
-Feature: Subscribe to Premium
+---
 
-Scenario: User subscribes to a premium plan
+#### **Subscribe to Premium**
 
-Given:
-The user is logged in and on the subscription page.
+**Scenario:** User subscribes to a premium plan  
+**Given:** The user is logged in and on the subscription page.  
+**When:** The user selects a premium plan and enters payment details.  
+**Then:**  
+- The subscription should be activated.  
+- The user should have access to premium features.  
 
-When:
-The user selects a premium plan and enters payment details.
-
-Then:
-The subscription should be activated.
-The user should have access to premium features.
 ```javascript
-const chai = require('chai');
-const expect = chai.expect;
-const subscriptionPage = require('../pages/subscriptionPage');
-
-describe('Subscribe to Premium', function() {
-  it('should process the subscription successfully', function() {
+describe('Subscribe to Premium', () => {
+  it('should process the subscription successfully', () => {
     subscriptionPage.open();
-
     subscriptionPage.selectPlan('Premium');
-
     subscriptionPage.enterPaymentDetails('4242 4242 4242 4242', '12/25', '123');
-
     subscriptionPage.submitSubscription();
-
     expect(subscriptionPage.getConfirmationMessage()).to.equal('Subscription activated');
-
     expect(browser.getUrl()).to.include('/premium-features');
   });
 });
-
 ```
 
 This test plan ensures that the Spotify Clone application is thoroughly tested across all critical modules, providing a reliable and user-friendly experience.
