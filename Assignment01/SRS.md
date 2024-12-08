@@ -116,7 +116,7 @@ The application will be a web-based and mobile platform providing music and podc
 ## 4. Non-Functional Requirements
 
 ### 4.1 Performance
-- *Response Time*: System responses within 2 seconds.
+- *Response Time*: System responses within 10 seconds.
 - *Streaming Quality*: High-quality audio up to 320 kbps.
 - *Scalability*: Support for up to 1 million concurrent users.
 
