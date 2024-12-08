@@ -1,4 +1,4 @@
-# User Requirements Document (URD) - Spotify Clone
+# User Requirements Document (URD) - Spotify
 
 ## 1. Introduction
 
