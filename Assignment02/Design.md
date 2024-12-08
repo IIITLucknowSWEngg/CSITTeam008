@@ -1,4 +1,4 @@
-# Software Design Description (SDD) for Spotify Clone
+# Software Design Description (SDD) for Spotify
 
 ## 1. Introduction
 
