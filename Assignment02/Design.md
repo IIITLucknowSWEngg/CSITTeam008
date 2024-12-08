@@ -66,7 +66,8 @@ The Spotify clone will use a distributed, microservices-based architecture with 
 
 ### 4.1 Frontend Architecture
 
-![Spotify Clone Frontend Architecture](frontend_arch_spotify.jpg)
+![Spotify Clone Frontend Architecture](https://github.com/user-attachments/assets/b49f035c-2219-46fb-865c-ec0151ce6958)
+()
 
 ```plantuml
 @startuml
@@ -213,7 +214,8 @@ end note
 
 ## 4.2 Backend System Architecture
 
-![System Architecture](Backend_arch_spotify.png)
+![System Architecture](https://github.com/user-attachments/assets/42b5c3f5-6ab7-4507-bf2e-f3ca8654b187)
+()
 
 ```plantuml
 @startuml
@@ -486,7 +488,8 @@ The Spotify clone uses a combination of SQL and NoSQL databases. Below is the sc
 - **Interactions**: Tracks likes, views, and shares.
 - **Subscriptions**: Tracks user subscriptions to artists or playlists.
 
-![Database Design](Assignment02/Diagrams/Spotify_database_design.png)
+![Database Design](https://github.com/user-attachments/assets/42bb18c4-937a-433f-8bfd-62df54f0ea5c)
+()
 
 ### PlantUML Code
 
