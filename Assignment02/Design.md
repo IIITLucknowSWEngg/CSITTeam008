@@ -242,12 +242,14 @@ The Spotify clone will use a distributed, microservices-based architecture with 
 
 The Spotify clone uses a combination of SQL and NoSQL databases. Below is the schema for major entities:
 
-- **Users**: Stores user information like username, email, and preferences.
-- **Tracks**: Stores track metadata, upload details, and URLs.
-- **Playlists**: Stores playlist information, including user-created playlists and public playlists.
-- **Comments**: Stores user comments and associated metadata.
-- **Interactions**: Tracks likes, views, and shares.
-- **Subscriptions**: Tracks user subscriptions to artists or playlists.
+- **User**: Stores user information like username, email, and preferences.
+- **Track**: Stores track metadata, upload details, and URLs.
+- **Playlist**: Stores playlist information, including user-created playlists and public playlists.
+- **Follow**:Who followed, whom did they follow and when did they follow.
+- **Like**:Who liked, which song was liked and when it was liked.
+- **Album**:Genre, cover image and other info of album.
+- **Artist**:Has the whole info about the artist like total streams, tracks etc.
+- **Playtrack**: Stores info about current playing track.
 
 ![Database Design](https://github.com/user-attachments/assets/42bb18c4-937a-433f-8bfd-62df54f0ea5c)
 
