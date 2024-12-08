@@ -1,4 +1,4 @@
-# Test Plan for Spotify Clone
+# Test Plan for Spotify
 
 ## 1. Introduction
 The Spotify Clone is a platform that allows users to stream music, create playlists, and discover new songs and artists. This document outlines the testing methodology to ensure platform functionality, security, and user experience.
