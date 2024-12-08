@@ -486,7 +486,7 @@ The Spotify clone uses a combination of SQL and NoSQL databases. Below is the sc
 - **Interactions**: Tracks likes, views, and shares.
 - **Subscriptions**: Tracks user subscriptions to artists or playlists.
 
-![Database Design](./Diagrams/spotify_database_design.png)
+![Database Design](Assignment02/Diagrams/Spotify_database_design.png)
 
 ### PlantUML Code
 
