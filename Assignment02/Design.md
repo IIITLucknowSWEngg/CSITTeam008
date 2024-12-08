@@ -270,9 +270,6 @@ Below are some of the REST API endpoints for interaction:
 - **Analytics Tools**: Tracks user interactions and performance metrics.
 - **Search Engine**: Provides fast and accurate search results.
 
-## 6.3 Notification Flow Diagram
-This diagram represents the flow of notifications for events like new comments or video uploads.
-
 ## 7. Non-Functional Requirements
 
 ### 7.1 Performance
