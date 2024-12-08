@@ -68,6 +68,113 @@ The Spotify clone will use a distributed, microservices-based architecture with 
 
 ![Spotify Clone Frontend Architecture](https://github.com/user-attachments/assets/b49f035c-2219-46fb-865c-ec0151ce6958)
 
+```plantuml
+@startuml
+!theme plain
+title Spotify Clone - Frontend Architecture
+
+package "Frontend Application" {
+    ' Core Architecture Layers
+    package "Presentation Layer" {
+        [Pages/Views] as Pages
+        [Components] as Components
+        [Layouts] as Layouts
+    }
+
+    package "State Management" {
+        [Redux Store] as ReduxStore
+        [Action Creators] as Actions
+        [Reducers] as Reducers
+        
+        folder "Slices" {
+            [User Slice] as UserSlice
+            [Music Slice] as MusicSlice
+            [Playlist Slice] as PlaylistSlice
+            [Artist Slice] as ArtistSlice
+        }
+    }
+
+    package "Services Layer" {
+        [Authentication Service] as AuthService
+        [Music Service] as MusicService
+        [Playlist Service] as PlaylistService
+        [Interaction Service] as InteractionService
+    }
+
+    package "Routing" {
+        [React Router] as Router
+        [Route Configuration] as RouteConfig
+    }
+
+    package "Utilities" {
+        [API Interceptor] as APIInterceptor
+        [Error Handling] as ErrorHandler
+        [Authentication Middleware] as AuthMiddleware
+    }
+
+    package "UI Kit & Styling" {
+        [Tailwind CSS] as Styling
+        [Shadcn UI Components] as UIKit
+        [Custom Icons] as Icons
+    }
+
+    package "Performance Optimization" {
+        [Code Splitting] as CodeSplit
+        [Lazy Loading] as LazyLoad
+        [Memoization] as Memoization
+    }
+}
+
+package "External Integrations" {
+    [Google OAuth] as OAuth
+    [Analytics] as Analytics
+}
+
+' Relationship Connections
+Pages -down-> Router
+Pages -down-> Components
+Pages -down-> ReduxStore
+
+Components -down-> UIKit
+Components -down-> Icons
+Components -down-> Styling
+
+ReduxStore -down-> Actions
+ReduxStore -down-> Reducers
+
+Actions -down-> Services
+Reducers -down-> Services
+
+Services -down-> APIInterceptor
+Services -down-> AuthMiddleware
+
+Router -down-> RouteConfig
+Router -down-> LazyLoad
+
+APIInterceptor -down-> OAuth
+APIInterceptor -down-> ErrorHandler
+
+' Performance Optimization Connections
+Pages -down-> CodeSplit
+Components -down-> Memoization
+
+' External Integration Connections
+Pages -down-> Analytics
+
+note right of "Frontend Application"
+    Technology Stack:
+    - React 18
+    - Redux Toolkit
+    - React Router
+    - TypeScript
+    - Tailwind CSS
+    - Shadcn UI
+    Responsive and Performant Design
+end note
+}
+@enduml
+```
+
 ### 4.1.1 Architectural Overview
 - **Modular Component-Based Design**: Utilizing React/Next.js for scalable frontend architecture
 - **Responsive Design**: Adaptive layout for web and mobile platforms
@@ -108,6 +215,138 @@ The Spotify clone will use a distributed, microservices-based architecture with 
 ## 4.2 Backend System Architecture
 
 ![System Architecture](https://github.com/user-attachments/assets/42b5c3f5-6ab7-4507-bf2e-f3ca8654b187)
+
+```plantuml
+@startuml
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Argonaut-B04/PlantUML-style-C4/master/style.puml
+
+title Spotify Clone - Backend System Architecture
+
+frame "Frontend Layer" {
+    [Web Client] as WebClient
+    [Mobile Client] as MobileClient
+}
+
+cloud "API Gateway" {
+    [Nginx / Kong API Gateway] as APIGateway
+}
+
+frame "Authentication Services" {
+    [Authentication Service] as AuthService
+    database "User Database" {
+        [MongoDB - User Profiles] as UserDB
+    }
+}
+
+frame "Music Processing Microservices" {
+    [Music Upload Service] as UploadService
+    [Music Encoding Service] as EncodingService
+    [Thumbnail Generation Service] as ArtworkService
+    
+    database "Music Metadata DB" {
+        [PostgreSQL - Music Metadata] as MusicMetadataDB
+    }
+    
+    storage "Music Storage" {
+        [Distributed File Storage] as MusicStorage
+    }
+}
+
+frame "Content Delivery" {
+    [CDN Service] as CDN
+}
+
+frame "Content Services" {
+    [Music Recommendation Service] as RecommendationService
+    [Search Service] as SearchService
+    [Analytics Service] as AnalyticsService
+    
+    database "Redis Caches" {
+        [Playlist Cache] as PlaylistCache
+        [Recommendation Cache] as RecommendCache
+    }
+    
+    database "Elasticsearch" {
+        [Music Search Index] as SearchIndex
+    }
+}
+
+frame "Social Interaction Services" {
+    [Like/Share Service] as LikeShareService
+    [Playlist Interaction Service] as PlaylistService
+    database "Interaction Database" {
+        [Cassandra - Likes/Comments] as InteractionDB
+    }
+}
+
+frame "Monetization Services" {
+    [Monetization Service] as MonetizationService
+    database "Billing Database" {
+        [PostgreSQL - Earnings] as BillingDB
+    }
+}
+
+frame "Message Queues & Event Streaming" {
+    [Apache Kafka] as EventBus
+    [RabbitMQ] as MessageQueue
+}
+
+frame "Monitoring & Observability" {
+    [Prometheus] as Monitoring
+    [Grafana] as Dashboard
+    [ELK Stack] as Logging
+}
+
+' Connections
+WebClient --> APIGateway
+MobileClient --> APIGateway
+
+APIGateway --> AuthService : Authentication
+APIGateway --> UploadService : Music Upload
+APIGateway --> LikeShareService : Likes/Share
+APIGateway --> PlaylistService : Playlist Management
+
+AuthService --> UserDB : Store/Retrieve Users
+AuthService --> EventBus : User Events
+
+UploadService --> MusicStorage : Store Music
+UploadService --> EncodingService : Trigger Encoding
+UploadService --> MusicMetadataDB : Store Metadata
+UploadService --> EventBus : Upload Events
+
+EncodingService --> ArtworkService : Generate Artwork
+EncodingService --> MusicStorage : Store Processed Music
+EncodingService --> EventBus : Encoding Events
+
+RecommendationService --> SearchIndex
+RecommendationService --> RecommendCache
+RecommendationService --> EventBus : Recommendation Events
+
+LikeShareService --> InteractionDB : Store Likes/Comments
+LikeShareService --> EventBus : Like Events
+
+PlaylistService --> PlaylistCache : Update Playlist
+PlaylistService --> EventBus : Playlist Events
+
+CDN --> MusicStorage : Distribute Content
+
+SearchService --> SearchIndex : Update/Query Search
+SearchService --> EventBus : Search Events
+
+AnalyticsService --> EventBus : Consume Events
+AnalyticsService --> Monitoring : Report Metrics
+
+MonetizationService --> BillingDB : Track Earnings
+MonetizationService --> EventBus : Monetization Events
+
+EventBus <--> MessageQueue : Event Routing
+
+Monitoring --> Logging : Collect Logs
+Monitoring --> Dashboard : Visualize Metrics
+
+@enduml
+```
 
 # Spotify Clone System Design
 
@@ -253,12 +492,162 @@ The Spotify clone uses a combination of SQL and NoSQL databases. Below is the sc
 
 ![Database Design](https://github.com/user-attachments/assets/42bb18c4-937a-433f-8bfd-62df54f0ea5c)
 
+### PlantUML Code
+
+```
+@startuml
+left to right direction
+actor User
+actor "Unregistered Visitor" as Visitor
+actor "Content Creator" as Creator
+actor "Administrator" as Admin
+
+rectangle Spotify {
+    // Authentication Use Cases
+    usecase "Register Account" as Register
+    usecase "Login" as Login
+    usecase "Manage Profile" as ManageProfile
+
+    // Track Interaction Use Cases
+    usecase "Listen to Track" as ListenTrack
+    usecase "Like/Dislike Track" as RateTrack
+    usecase "Comment on Track" as CommentTrack
+    usecase "Share Track" as ShareTrack
+
+    // Playlist Interaction Use Cases
+    usecase "Create Playlist" as CreatePlaylist
+    usecase "Add Track to Playlist" as AddToPlaylist
+    usecase "Remove Track from Playlist" as RemoveFromPlaylist
+
+    // Search and Discovery
+    usecase "Search Tracks" as Search
+    usecase "Recommended Tracks" as Recommendations
+    usecase "Browse Genres" as BrowseGenres
+
+    // Monetization
+    usecase "Enable Monetization" as Monetize
+    usecase "View Earnings" as ViewEarnings
+
+    // Admin Use Cases
+    usecase "Content Moderation" as Moderation
+    usecase "User Management" as UserManagement
+    usecase "Platform Settings" as PlatformSettings
+
+    // Relationships
+    Visitor --> ListenTrack
+    Visitor --> Search
+    Visitor --> Login
+    Visitor --> Register
+
+    User --> Login
+    User --> ListenTrack
+    User --> RateTrack
+    User --> CommentTrack
+    User --> ShareTrack
+    User --> Search
+    User --> CreatePlaylist
+    User --> AddToPlaylist
+    User --> RemoveFromPlaylist
+    User --> Recommendations
+    User --> ManageProfile
+
+    Creator --> UploadTrack
+    Creator --> EditTrack
+    Creator --> DeleteTrack
+    Creator --> CreatePlaylist
+    Creator --> BrowseGenres
+    Creator --> Monetize
+    Creator --> ViewEarnings
+
+    Admin --> Moderation
+    Admin --> UserManagement
+    Admin --> PlatformSettings
+}
+@enduml
+```
+
 ## 6. Interface Design
 
 ![Interface design](https://github.com/user-attachments/assets/c4d695df-979d-4f2b-bf92-da219792d006)
 
+```plantuml
+@startuml
+skinparam linetype polyline
+title Spotify - Interface Design
 
+rectangle "Authentication Screens" {
+    (Login Screen) as Login
+    (Registration Screen) as Register
+    (Password Reset) as PasswordReset
+}
 
+rectangle "Main Application Screens" {
+    (Home/Feed Screen) as Home
+    (Music Player Screen) as MusicPlayer
+    (Artist Page) as Artist
+    (Search Results) as Search
+    (Playlist Screen) as Playlist
+    (Trending Screen) as Trending
+    (Subscriptions Screen) as Subscriptions
+}
+
+rectangle "Creator Studio Screens" {
+    (Track Upload) as Upload
+    (Track Management) as TrackManage
+    (Artist Customization) as ArtistCustom
+    (Analytics Dashboard) as Analytics
+    (Monetization) as Monetization
+}
+
+rectangle "User Profile Screens" {
+    (User Profile) as Profile
+    (Account Settings) as Settings
+    (Listening History) as History
+    (Liked Songs) as LikedSongs
+}
+
+rectangle "Navigation Components" {
+    (Sidebar) as Sidebar
+    (Top Navigation Bar) as TopNav
+    (Search Bar) as SearchBar
+    (Mobile Navigation) as MobileNav
+}
+
+rectangle "UI Components" {
+    (Song Thumbnail) as Thumbnail
+    (Follow Button) as FollowButton
+    (Interaction Controls) as InteractControls
+    (Comment Section) as Comments
+    (Recommended Songs) as Recommendations
+}
+
+' Navigation Flows
+Login --> Home
+Register --> Home
+Home --> MusicPlayer
+MusicPlayer --> Artist
+SearchBar --> Search
+Sidebar --> Home
+Sidebar --> Subscriptions
+Sidebar --> Trending
+Artist --> Upload
+Artist --> TrackManage
+
+note right of "UI Components"
+    Design Principles:
+    - Responsive Design
+    - Mobile-First Approach
+    - Consistent UI/UX
+    - Accessibility
+    - Performance Optimized
+
+    Breakpoints:
+    - Mobile: <600px
+    - Tablet: 600-1024px
+    - Desktop: >1024px
+end note
+@enduml
+```
 
 ## 6.1 API Design
 Below are some of the REST API endpoints for interaction:
