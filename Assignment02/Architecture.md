@@ -1,17 +1,46 @@
-# 1. user flow Diagram
+# 1. C4 Diagrams 🚀
+
+# 1.1 System Context Diagram 🔥
+
+![Context Diagram](https://github.com/user-attachments/assets/646d9fd0-5dd8-4758-98bb-9ec0f70d083f)
+
+This diagram illustrates key interactions:  
+1. **Users** interact with the app to stream music and manage playlists.  
+2. **Admins** use the Admin Panel to moderate content and view analytics.  
+3. **External Systems** provide metadata and handle payment processing via APIs.
+
+# 1.2 Container Diagram 🔥
+
+
+![Container Diagram](https://github.com/user-attachments/assets/3b80d932-eda0-42c0-b4cb-b86a384a7e10)
+
+This diagram shows different system components and their interactions:  
+1. **Mobile App** - Native app for Android and iOS users.  
+2. **Web Application** - Frontend for listeners and admins via browsers.  
+3. **Backend API** - Handles requests, authentication, and streaming logic.  
+4. **Admin Panel** - Interface for admin users to moderate content and analytics.  
+5. **Database** - Stores user data, playlists, and analytics.  
+6. **Object Storage** - Manages music files, album art, and user images.  
+7. **Third-party APIs** - Provides metadata and processes payments.  
+
+# 1.3 Component Diagram 🔥
+
+## 1.3.1 user flow Diagram 🚀
 This diagram illustrates the user journey in the Spotify Clone app, highlighting key actions like login, search, playback, and social sharing.
 
 
 ## Key Features:
+
+![spotify_clone_user_flow](https://github.com/user-attachments/assets/de42e19a-532b-4eda-a022-be63ae48149d)
 
 - **Login/Signup Process:** Users can log in or sign up to access the platform.
 - **Music Search and Playback:** Search for songs or playlists and play music seamlessly.
 - **Playlist Sharing and Commenting:** Users can share playlists, write comments, and interact with shared posts.
 - **Decision-Driven Navigation Paths:** Logical decision points guide users through the platform.
 
-- ![spotify_clone_user_flow](https://github.com/user-attachments/assets/de42e19a-532b-4eda-a022-be63ae48149d)
+## 1.3.2. Spotify App Flow Overview 🚀
 
-# 2. Spotify App Flow Overview
+![App_Flow_Overview](https://github.com/user-attachments/assets/1094dc9f-48d1-4dac-a535-6c6e2c64739a)
 
 This diagram illustrates the Spotify app's structure, divided into three main sections:
 
@@ -22,11 +51,11 @@ This diagram illustrates the Spotify app's structure, divided into three main se
 ### New Features:
 - **Music Memo** and **Music Memo Editor** are introduced across all sections for enhanced user interaction.
 
-![App_Flow_Overview](https://github.com/user-attachments/assets/1094dc9f-48d1-4dac-a535-6c6e2c64739a)
 
 
 
-# 3. Playlist Tagging and Navigation Overview
+
+## 1.3.3. Playlist Tagging and Navigation Overview 🚀
 
 This workflow focuses on enhancing playlist organization and tag-based discoverability within the music app:
 
@@ -35,19 +64,24 @@ This workflow focuses on enhancing playlist organization and tag-based discovera
   - Includes sorting options like creation date, last interaction, or name.
 
 - **Tagging Songs**:
+
+- ![Playlist_Tagging_and_Navigation_Overview](https://github.com/user-attachments/assets/f7b5b8f3-eb73-426d-896c-c6afa6405518)
+
   - Add metadata to songs via a "More Options Menu."
   - Use text input to create new tags or select from existing ones via dropdown/autocomplete.
 
 - **Search for Tags**:
   - Search specific tags (e.g., `#POP`) to find tagged playlists and tagged radios.
   - Results are displayed in carousel or list formats for seamless exploration.
-![Playlist_Tagging_and_Navigation_Overview](https://github.com/user-attachments/assets/f7b5b8f3-eb73-426d-896c-c6afa6405518)
 
-# 4. Application Navigation Overview
+
+## 1.3.4. Application Navigation Overview 🚀
 
 This document provides an overview of the application's navigation flow and primary components.
 
 ## Components:
+
+![Interface_design](https://github.com/user-attachments/assets/1f1e60ee-28bb-4eee-b216-57f5fa6f0d77)
 
 1. **Authentication Screens**:
    - Includes `Login`, `Registration`, and `Password Reset`.
@@ -66,8 +100,19 @@ This document provides an overview of the application's navigation flow and prim
 
 6. **UI Components**:
    - Features include `Playlist Management`, `Recommended Tracks`, `Like Button`, and `Play Controls`.
+  
 
-![Interface_design](https://github.com/user-attachments/assets/1f1e60ee-28bb-4eee-b216-57f5fa6f0d77)
+# 1.4 Deployment Diagram 🚀
+
+![Dep](https://github.com/user-attachments/assets/0fb22ffd-bcc4-4e52-82ce-cdb765338437)
+
+
+This diagram highlights the key system components and their interactions:  
+1. **User Devices** - Web and Mobile Apps for accessing the platform.  
+2. **Web Server** - Includes services like Music Streaming, Playlist Management, User Authentication, Admin Dashboard, and Subscription Management.  
+3. **Database Server** - Contains Music Database, User Database, and Subscription Database for managing user data and music content.  
+4. **Payment Gateway** - Handles premium subscription payments via the Payment Service.
+
 
 
 
