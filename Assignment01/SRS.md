@@ -1,4 +1,4 @@
-# Software Requirements Specification (SRS) for "Spotify" Clone
+# Software Requirements Specification (SRS) for "Spotify"
 
 ## 1. Introduction
 
