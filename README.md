@@ -1,4 +1,4 @@
-# 🎧 CSITTeam008 - Spotify Clone 🎧
+# 🎧 CSITTeam008 - Spotify 🎧
 
 ## Team Code Wrappers
 
