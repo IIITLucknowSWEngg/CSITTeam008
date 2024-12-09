@@ -2,7 +2,8 @@
 
 # 1.1 System Context Diagram 🔥
 
-![Context Diagram](https://github.com/user-attachments/assets/646d9fd0-5dd8-4758-98bb-9ec0f70d083f)
+![Screenshot 2024-12-09 135926](https://github.com/user-attachments/assets/175bdf8f-741d-45b8-9f82-9190064a30af)
+
 
 This diagram illustrates key interactions:  
 1. **Users** interact with the app to stream music and manage playlists.  
@@ -11,8 +12,9 @@ This diagram illustrates key interactions:
 
 # 1.2 Container Diagram 🔥
 
+![Screenshot 2024-12-09 142522](https://github.com/user-attachments/assets/4a9097c5-a546-4f34-9131-a1bff9df945f)
 
-![Container Diagram](https://github.com/user-attachments/assets/3b80d932-eda0-42c0-b4cb-b86a384a7e10)
+
 
 This diagram shows different system components and their interactions:  
 1. **Mobile App** - Native app for Android and iOS users.  
