@@ -273,9 +273,9 @@ Below are some of the REST API endpoints for interaction:
 ## 7. Non-Functional Requirements
 
 ### 7.1 Performance
-- Support for 100,000 simultaneous users with peak load handling
-- Maximum video load time: 2 seconds for standard definition
-- Maximum video start time: 1 second for adaptive streaming
+- Support for 1,000 simultaneous users with peak load handling
+- Maximum video load time: 5 seconds for standard definition
+- Maximum video start time: 3 second for adaptive streaming
 - Content delivery network (CDN) response time under 50 milliseconds
 - Efficient resource utilization with less than 70% CPU and memory load during peak traffic
 - Support for 4K and 8K video streaming with adaptive bitrate technology
@@ -290,7 +290,7 @@ Below are some of the REST API endpoints for interaction:
 - Elastic database scaling with read replicas and sharding mechanisms
 
 ### 7.3 Availability
-- 99.9% system uptime guarantee
+- As much as possible system uptime guarantee
 - Redundant component architecture
 - Multi-region failover support
 - Automatic service recovery mechanisms
