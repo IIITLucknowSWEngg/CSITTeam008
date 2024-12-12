@@ -1,4 +1,4 @@
-# 🎧 CSITTeam008 - Spotify 🎧
+# 🎧 CSITTeam008 - Spotify Competitor 🎧
 
 ## Team Code Wrappers
 
