@@ -1,6 +1,10 @@
 # 1. C4 Diagrams 🚀
 
-# 1.1 System Context Diagram 🔥
+# The C4 model for visualising software architecture 
+![WhatsApp Image 2024-12-12 at 13 41 26](https://github.com/user-attachments/assets/05930cec-ecb9-4329-aed0-22eadbcda75a)
+
+
+# 1.1 System Context Diagram 
 
 ![Screenshot 2024-12-09 135926](https://github.com/user-attachments/assets/175bdf8f-741d-45b8-9f82-9190064a30af)
 
@@ -10,7 +14,7 @@ This diagram illustrates key interactions:
 2. **Admins** use the Admin Panel to moderate content and view analytics.  
 3. **External Systems** provide metadata and handle payment processing via APIs.
 
-# 1.2 Container Diagram 🔥
+# 1.2 Container Diagram 
 
 ![Screenshot 2024-12-09 142522](https://github.com/user-attachments/assets/4a9097c5-a546-4f34-9131-a1bff9df945f)
 
@@ -25,7 +29,7 @@ This diagram shows different system components and their interactions:
 6. **Object Storage** - Manages music files, album art, and user images.  
 7. **Third-party APIs** - Provides metadata and processes payments.  
 
-# 1.3 Component Diagram 🔥
+# 1.3 Component Diagram 
 
 ## 1.3.1 user flow Diagram 🚀
 This diagram illustrates the user journey in the Spotify Clone app, highlighting key actions like login, search, playback, and social sharing.
